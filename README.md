@@ -1,5 +1,19 @@
 # Desafio técnico Tecnofit - Ranking de Movimento
 
+- [Descrição geral](#descrição-geral)
+- [Instalação](#instalação)
+  - [Docker](#docker)
+  - [.env](#env)
+  - [Inicialização do servidor](#inicialização-do-servidor)
+- [Testes](#testes)
+- [Logs](#logs)
+- [Detalhes técnicos](#detalhes-técnicos)
+  - [Estrutura arquitetural](#estrutura-arquitetural)
+  - [Omissões](#omissões)
+  - [Bibliotecas utilizadas](#bibliotecas-utilizadas)
+- [Estrutura do sistema](#estrutura-do-sistema)
+- [Documentação da API](#documentação-da-api)
+
 ## Descrição geral
 Esta API relaciona dados do banco de dados para gerar um ranking de usuários que tiveram melhor recorde em um determinado movimento. A consulta ocorre através de uma requisição HTTP para o endpoint especificado, que retorna uma resposta no formato JSON com o código de status da requisição e, se existente, o ranking do movimento solicitado.
 
