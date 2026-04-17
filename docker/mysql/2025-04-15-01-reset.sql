@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS movement;
+DROP TABLE IF EXISTS personal_record;

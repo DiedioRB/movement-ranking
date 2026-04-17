@@ -1,0 +1,48 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Ranking API",
+        "description": "API for movement ranking results",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000",
+            "description": "Local server"
+        }
+    ],
+    "paths": {
+        "/v1/movements/{id}": {
+            "get": {
+                "summary": "Lists a movement's value ranking.",
+                "operationId": "c06520caa590edb729098840ea7df591",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "The movement's ID or name",
+                        "required": true,
+                        "schema": {
+                            "oneOf": [
+                                {
+                                    "type": "integer"
+                                },
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Returns the score ranking of a movement. Might return an empty list if no ranking is found."
+                    },
+                    "404": {
+                        "description": "The movement searched does not exists."
+                    }
+                }
+            }
+        }
+    }
+}
