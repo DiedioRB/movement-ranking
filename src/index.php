@@ -23,7 +23,7 @@ set_exception_handler(function ($e) {
 $router = require "routes/paths.php";
 
 // Recover the current URI without parameters and method used
-$uri = strtok($_SERVER['REQUEST_URI'], "?");
+$uri = strtok(urldecode($_SERVER['REQUEST_URI']), "?");
 $method = $_SERVER['REQUEST_METHOD'];
 
 // Tries to find the requested URL within the router paths and executes its function
